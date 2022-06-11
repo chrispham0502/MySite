@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, curCount, typingSpeed = 150, timeDelay = 2000}) => {
+const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, curCount, deleteSpeed = 100, typingSpeed = 150, timeDelay = 2000}) => {
 
     const [phase, setPhase] = useState('PageLoad')
     const [typedText, setTypedText] = useState(deleteText)
@@ -17,14 +17,23 @@ const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, 
             case 'Deleting': {
                 const timeout = setTimeout(() => {
                     setTypedText(deleteText.slice(0, typedText.length - 1))
-                }, typingSpeed)
+                }, deleteSpeed)
                 
                 if (typedText == ""){
-                    setPhase('Typing');
+                    setPhase('Pausing');
                 }
                 
                 return () => clearTimeout(timeout)
             }
+
+            case 'Pausing': {
+                const timeout = setTimeout(() => {
+                    setPhase('Typing');
+                }, 500)
+                
+                return () => clearTimeout(timeout)
+            }
+
             case 'Typing': {
                 const timeout = setTimeout(() => {
                     setTypedText(replaceText.slice(0, typedText.length + 1))
@@ -39,7 +48,7 @@ const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, 
     }, [typedText, phase])
 
   return (
-    <span class = "cursor" style={{"--blink-delay": curDelay, "--blink-count": curCount }}> {staticText} {typedText}</span>
+    <span class = "cursor" style={{"--blink-delay": curDelay, "--blink-count": curCount }}> {staticText}{typedText}</span>
   )
 }
 
