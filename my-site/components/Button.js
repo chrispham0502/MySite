@@ -16,10 +16,13 @@ const Button = ({link, timeDelay = 2000, text}) => {
 
             case 'Create': {
                 setButton(
-                    <button className="button-glow " role="button">
-                        <a href={link}><Typing replaceText={text} typingSpeed={100} typeDelay={750} /></a>
-                    </button>
+                    <a href={link}>
+                        <button className="button-glow " role="button">
+                            <Typing replaceText={text} typingSpeed={100} typeDelay={750} />
+                        </button>
+                    </a>
                 )
+                setPhase('Done')
             }
             default:
                 return
