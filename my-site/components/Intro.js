@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import Typing from "./Typing"
-import styles from '../styles/Home.module.css'
 
 const typingSpeed = 100;
 
@@ -34,6 +33,7 @@ const Intro = () => {
             }
             case 'Final': {
                 setIntro(texts[2])
+                setPhase('Done')
             }
             default:
                 return
@@ -42,7 +42,7 @@ const Intro = () => {
     }, [intro, phase])
 
     return (
-        <h1 className={styles.title}>
+        <h1 className={"title"}>
             {intro}
         </h1>
     )
