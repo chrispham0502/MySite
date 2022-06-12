@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, curCount, deleteSpeed = 100, typingSpeed = 150, timeDelay = 2000}) => {
+const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, curCount, deleteSpeed = 60, typingSpeed = 150, timeDelay = 2000}) => {
 
     const [phase, setPhase] = useState('PageLoad')
     const [typedText, setTypedText] = useState(deleteText)
@@ -48,7 +48,7 @@ const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, 
     }, [typedText, phase])
 
   return (
-    <span class = "cursor" style={{"--blink-delay": curDelay, "--blink-count": curCount }}> {staticText}{typedText}</span>
+    <span className = "cursor" style={{"--blink-delay": curDelay, "--blink-count": curCount }}> {staticText}{typedText}</span>
   )
 }
 
