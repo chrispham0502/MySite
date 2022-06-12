@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, curCount, deleteSpeed = 60, typingSpeed = 150, timeDelay = 2000}) => {
+const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, curCount, deleteSpeed = 60, typingSpeed = 150, typeDelay = 2000}) => {
 
     const [phase, setPhase] = useState('PageLoad')
     const [typedText, setTypedText] = useState(deleteText)
@@ -10,7 +10,7 @@ const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, 
             case 'PageLoad':
                 const timeout = setTimeout(() => {
                     setPhase('Deleting')
-                }, timeDelay)
+                }, typeDelay)
 
                 return () => clearTimeout(timeout)
 

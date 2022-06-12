@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 const typingSpeed = 100;
 
 const texts = [
-    <Typing key={1} staticText=" Hello" deleteText=", World!" replaceText=" there!" typingSpeed={typingSpeed} timeDelay={3500} />,
+    <Typing key={1} staticText=" Hello" deleteText=", World!" replaceText=" there!" typingSpeed={typingSpeed} typeDelay={3500} />,
     <Typing key={2} deleteText=" Hello there!" replaceText="I'm Triet Pham" typingSpeed={typingSpeed} />,
     <Typing key={3} deleteText=" I'm Triet Pham" replaceText="Welcome to my website!" curCount={9} typingSpeed={typingSpeed} />
 ]
