@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import Typing from "./Typing"
 
-const typingSpeed = 100;
+const typingInterval = 80;
 
 const texts = [
-    <Typing key={1} staticText=" Hello" deleteText=", World!" replaceText=" there!" typingSpeed={typingSpeed} typeDelay={3500} />,
-    <Typing key={2} deleteText=" Hello there!" replaceText="I'm Triet Pham" typingSpeed={typingSpeed} />,
-    <Typing key={3} deleteText=" I'm Triet Pham" replaceText="Welcome to my website!" curCount={9} typingSpeed={typingSpeed} />
+    <Typing key={1} staticText=" Hello" deleteText=", World!" replaceText=" there!" typingInterval={typingInterval} typeDelay={3500} />,
+    <Typing key={2} deleteText=" Hello there!" replaceText="I'm Triet Pham" typingInterval={typingInterval} />,
+    <Typing key={3} deleteText=" I'm Triet Pham" replaceText="Welcome to my website!" curCount={9} typingInterval={typingInterval} />
 ]
 
 
@@ -27,7 +27,7 @@ const Intro = () => {
                 setIntro(texts[1])
                 const timeout = setTimeout(() => {
                     setPhase('Final')
-                }, 5000)
+                }, 5250)
 
                 return () => clearTimeout(timeout)
             }
@@ -42,7 +42,7 @@ const Intro = () => {
     }, [intro, phase])
 
     return (
-        <h1 className={"title"}>
+        <h1 className="intro">
             {intro}
         </h1>
     )

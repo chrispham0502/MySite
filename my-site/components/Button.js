@@ -18,7 +18,7 @@ const Button = ({link, timeDelay = 2000, text}) => {
                 setButton(
                     <a href={link}>
                         <button className="button-glow " role="button">
-                            <Typing replaceText={text} typingSpeed={100} typeDelay={750} />
+                            <Typing replaceText={text} typingInterval={80} typeDelay={750} />
                         </button>
                     </a>
                 )
