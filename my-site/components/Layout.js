@@ -3,7 +3,7 @@ import NavBar from "./NavBar"
 
 const Layout = ({children}) => {
   return (
-    <div style={{height:"100vh"}}>
+    <div className="layout">
         <NavBar />
         <main>{children}</main>
         <Footer />
