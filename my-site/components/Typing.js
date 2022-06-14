@@ -1,23 +1,36 @@
 import { useEffect, useState } from "react"
 
-const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, curCount, deleteSpeed = 60, typingSpeed = 150, typeDelay = 2000}) => {
+const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, curCount, deleteInterval = 60, typingInterval = 150, typeDelay = 2000, timeDelay = 0}) => {
 
-    const [phase, setPhase] = useState('PageLoad')
+    const [phase, setPhase] = useState('New')
     const [typedText, setTypedText] = useState(deleteText)
+    const [curClass, setCurClass] = useState()
 
     useEffect(() => {
         switch (phase){
-            case 'PageLoad':
+
+            case 'New': {
+                const timeout = setTimeout(() => {
+                    setPhase('Create')
+                    setCurClass('cursor')
+                }, timeDelay)
+
+                return () => clearTimeout(timeout)
+            }
+
+            case 'Create': {
                 const timeout = setTimeout(() => {
                     setPhase('Deleting')
                 }, typeDelay)
 
                 return () => clearTimeout(timeout)
+            }
+                
 
             case 'Deleting': {
                 const timeout = setTimeout(() => {
                     setTypedText(deleteText.slice(0, typedText.length - 1))
-                }, deleteSpeed)
+                }, deleteInterval)
                 
                 if (typedText == ""){
                     setPhase('Pausing');
@@ -37,7 +50,7 @@ const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, 
             case 'Typing': {
                 const timeout = setTimeout(() => {
                     setTypedText(replaceText.slice(0, typedText.length + 1))
-                }, typingSpeed)
+                }, typingInterval)
 
                 return () => clearTimeout(timeout)
             }
@@ -45,10 +58,10 @@ const Typing = ({staticText = "", deleteText = "", replaceText = "" , curDelay, 
                 return
         }
 
-    }, [typedText, phase])
+    }, [curClass, typedText, phase])
 
   return (
-    <span className = "cursor" style={{"--blink-delay": curDelay, "--blink-count": curCount }}> {staticText}{typedText}</span>
+    <span className = {curClass} style={{"--blink-delay": curDelay, "--blink-count": curCount }}> {staticText}{typedText}</span>
   )
 }
 
