@@ -6,7 +6,7 @@ const NavBar = () => {
   
   return (
     <nav>
-      <div className=" bg-transparent flex flex-wrap justify-between items-stretch mx-auto">
+      <div className=" bg-transparent flex flex-wrap justify-between items-stretch mx-auto px-3 py-1">
           <a href="/" className={router.pathname == "/" ? "itemSelected" : "item"}>
               <span>trietpham.me</span>
           </a>
