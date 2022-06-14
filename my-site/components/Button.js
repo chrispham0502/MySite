@@ -17,7 +17,7 @@ const Button = ({link, timeDelay = 2000, text}) => {
             case 'Create': {
                 setButton(
                     <a href={link}>
-                        <button className="button-glow " role="button">
+                        <button className="button-glow text-xs sm:text-base" role="button">
                             <Typing replaceText={text} typingInterval={80} typeDelay={750} />
                         </button>
                     </a>
