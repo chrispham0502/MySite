@@ -1,7 +1,10 @@
 import { DiPython, DiCss3} from "react-icons/di";
 import { AiFillHtml5, AiFillGithub, AiOutlineConsoleSql } from "react-icons/ai";
-import {TbBrandNextjs} from "react-icons/tb";
-import {SiCplusplus, SiCsharp, SiJavascript, SiTailwindcss, SiBlazor, SiFlask, SiMicrosoftoffice, SiVisualstudio, SiVisualstudiocode, SiSqlite} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaDog, FaGuitar } from "react-icons/fa";
+import { SiCplusplus, SiCsharp, SiJavascript, SiTailwindcss, SiBlazor, SiFlask, SiMicrosoftoffice, SiVisualstudio, SiVisualstudiocode, SiSqlite} from "react-icons/si";
+import { GiSushis } from "react-icons/gi";
+import { CgCardSpades } from "react-icons/cg";
 import { useEffect, useState } from "react";
 import Typing from "./Typing";
 
@@ -22,7 +25,13 @@ const icons = {
     "vs": <SiVisualstudio size={25}/>,
     "vsc": <SiVisualstudiocode size={25}/>,
     "sql": <AiOutlineConsoleSql size={25}/>,
-    "sqlite": <SiSqlite size={25}/>
+    "sqlite": <SiSqlite size={25}/>,
+    
+    // other icons
+    "dog": <FaDog size={24}/>,
+    "guitar": <FaGuitar size={24}/>,
+    "card": <CgCardSpades size={24}/>,
+    "sushi": <GiSushis size={24}/>
 }  
 
 const test = []
@@ -31,7 +40,7 @@ for (const key of Object.keys(icons)){
     test.push(<div className="flex flex-row"> {icons[key]} &nbsp;<Typing replaceText="  TestText" /></div>)
 }
 
-const IconText = ({icon, text = "", timeDelay = 0}) => {
+const IconText = ({icon, text = "", curCount = 1, timeDelay = 0}) => {
     
     const [iconText, setIconText] = useState([])
     const [phase, setPhase] = useState("New")
@@ -47,7 +56,7 @@ const IconText = ({icon, text = "", timeDelay = 0}) => {
             case 'Create': {
                 setIconText(
                     <div className="flex flex-row"> 
-                        {icons[icon]} &nbsp;&nbsp; <div className="text-skill"><Typing replaceText={text} typingInterval={50} typeDelay={0} curCount={1}/></div>
+                        {icons[icon]} &nbsp;&nbsp; <div className="text-skill"><Typing replaceText={text} typingInterval={30} typeDelay={0} curCount={curCount}/></div>
                     </div>
                 )
                 setPhase('Done')
