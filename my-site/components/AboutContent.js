@@ -9,7 +9,7 @@ const contents = {
                 learning to achieve my goal of becoming an outstanding software engineer." 
                 typingInterval={30} timeDelay={0} typeDelay={1000} curCount={13} />
             </div>,
-    "skills": <div className='about-box mt-5 w-full'>
+    "skills": <div className='about-box mt-5 w-full py-8'>
                 <div className='flex flex-row  justify-between sm:pl-8 xl:pl-16'>
                     <div className="skill-content"><IconText timeDelay={0} icon="py" text="Python" /></div>
                     <div className="skill-content"><IconText timeDelay={1000} icon="cpp" text="C++" /></div>
@@ -36,7 +36,7 @@ const contents = {
                     <div className="skill-content"><IconText curCount={3} timeDelay={14000} icon="office" text="Office" /></div>
                 </div>
             </div>,
-    "facts":<div className='about-box mt-5 w-full'>
+    "facts":<div className='about-box mt-5 w-full py-8'>
                 <div className='flex flex-row justify-center xl:px-6 xl:pr-1'>
                     <div className="hobby-content sm:mt-0"><IconText curCount={2} timeDelay={0} typeDelay={500} icon="dog" text="I'm a huge dog lover" /></div>
                     <div className="hobby-content sm:mt-0"><IconText curCount={2} timeDelay={2000} typeDelay={500} icon="guitar" text="I enjoy playing guitar" /></div>
