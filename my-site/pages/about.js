@@ -34,7 +34,7 @@ function About() {
           <AboutContent contentName="facts" timeDelay={42000}/>
 
           {/* EXPERIENCE BUTTON */}
-          <div className="my-10 sm:my-20 2xl:my-28">
+          <div className="my-10 sm:my-20 ">
             <Button link='/experience' timeDelay={52000} text="View my experience"/>
           </div>
 
