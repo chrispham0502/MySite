@@ -5,6 +5,7 @@ import { FaDog, FaGuitar } from "react-icons/fa";
 import { SiCplusplus, SiCsharp, SiJavascript, SiTailwindcss, SiBlazor, SiFlask, SiMicrosoftoffice, SiVisualstudio, SiVisualstudiocode, SiSqlite} from "react-icons/si";
 import { GiSushis } from "react-icons/gi";
 import { CgCardSpades } from "react-icons/cg";
+import { BsLink45Deg } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import Typing from "./Typing";
 
@@ -31,7 +32,8 @@ const icons = {
     "dog": <FaDog size={24}/>,
     "guitar": <FaGuitar size={24}/>,
     "card": <CgCardSpades size={24}/>,
-    "sushi": <GiSushis size={24}/>
+    "sushi": <GiSushis size={24}/>,
+    "link": <BsLink45Deg size={25}/>,
 }  
 
 const test = []
