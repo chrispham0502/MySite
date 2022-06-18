@@ -7,7 +7,7 @@ const contents = {
     "about": <div className='about-box mt-5 text-xs sm:text-base'>
                 <Typing key={2} replaceText="I'm from Vietnam, currently an international student majoring in Computer Science at University of Cincinnati. I'm passionate about technology, I like to code and I always strive for exellence. I'm constantly
                 learning to achieve my goal of becoming an outstanding software engineer." 
-                typingInterval={30} timeDelay={0} typeDelay={1000} curCount={13} />
+                typingInterval={30} timeDelay={0} typeDelay={0} curCount={13} />
             </div>,
     "skills": <div className='about-box mt-5 w-full py-8'>
                 <div className='flex flex-row  justify-between sm:pl-8 xl:pl-16'>
@@ -38,8 +38,8 @@ const contents = {
             </div>,
     "facts":<div className='about-box mt-5 w-full py-8'>
                 <div className='flex flex-row justify-center xl:px-6 xl:pr-1'>
-                    <div className="hobby-content sm:mt-0"><IconText curCount={2} timeDelay={0} typeDelay={500} icon="dog" text="I'm a huge dog lover" /></div>
-                    <div className="hobby-content sm:mt-0"><IconText curCount={2} timeDelay={2000} typeDelay={500} icon="guitar" text="I enjoy playing guitar" /></div>
+                    <div className="hobby-content -mt-1 sm:mt-0"><IconText curCount={2} timeDelay={0} typeDelay={500} icon="dog" text="I'm a huge dog lover" /></div>
+                    <div className="hobby-content -mt-1 sm:mt-0"><IconText curCount={2} timeDelay={2000} typeDelay={500} icon="guitar" text="I enjoy playing guitar" /></div>
                 </div>
                 <div className='flex flex-row justify-center xl:px-6 xl:pr-1'>
                     <div className="hobby-content"><IconText curCount={2} timeDelay={4000} typeDelay={500} icon="card" text="I collect playing cards" /></div>
