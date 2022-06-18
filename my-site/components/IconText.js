@@ -2,10 +2,11 @@ import { DiPython, DiCss3} from "react-icons/di";
 import { AiFillHtml5, AiFillGithub, AiOutlineConsoleSql } from "react-icons/ai";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaDog, FaGuitar } from "react-icons/fa";
-import { SiCplusplus, SiCsharp, SiJavascript, SiTailwindcss, SiBlazor, SiFlask, SiMicrosoftoffice, SiVisualstudio, SiVisualstudiocode, SiSqlite} from "react-icons/si";
+import { SiCplusplus, SiCsharp, SiJavascript, SiTailwindcss, SiBlazor, SiFlask, SiMicrosoftoffice, SiVisualstudio, SiVisualstudiocode, SiSqlite, SiLabview } from "react-icons/si";
 import { GiSushis } from "react-icons/gi";
 import { CgCardSpades } from "react-icons/cg";
-import { BsLink45Deg } from "react-icons/bs";
+import { BsLink45Deg, BsFillPhoneFill } from "react-icons/bs";
+import { MdEmail} from "react-icons/md";
 import { useEffect, useState } from "react";
 import Typing from "./Typing";
 
@@ -27,6 +28,7 @@ const icons = {
     "vsc": <SiVisualstudiocode size={25}/>,
     "sql": <AiOutlineConsoleSql size={25}/>,
     "sqlite": <SiSqlite size={25}/>,
+    "labview":<SiLabview size={28}/>,
     
     // other icons
     "dog": <FaDog size={24}/>,
@@ -34,6 +36,8 @@ const icons = {
     "card": <CgCardSpades size={24}/>,
     "sushi": <GiSushis size={24}/>,
     "link": <BsLink45Deg size={25}/>,
+    "phone": <BsFillPhoneFill size={25}/>,
+    "email": <MdEmail size={28}/>
 }  
 
 const test = []
