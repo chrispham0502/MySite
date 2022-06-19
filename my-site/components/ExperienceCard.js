@@ -2,26 +2,26 @@
 
 const ExperienceCard = ({bgURL, logoURL, company, department, job, description, date, location}) => {
   return (
-    <div class="card">
-        <figure  class="card-background">
+    <div className="card">
+        <figure  className="card-background">
           <img src={bgURL} alt="background"/>
         </figure>
-        <div class="card-header">
-          <figure class="card-logo">
+        <div className="card-header">
+          <figure className="card-logo">
             <img src={logoURL} alt="logo"/>
           </figure>
         </div>
-        <div class="card-body">
-          <h3 class="card-company">{company}</h3>
-          <p class="card-department">{department}</p>
-          <p class="card-job">{job}</p>
-          <p class="card-description">
+        <div className="card-body">
+          <h3 className="card-company">{company}</h3>
+          <p className="card-department">{department}</p>
+          <p className="card-job">{job}</p>
+          <p className="card-description">
             {description}      
           </p>
         </div>
-        <div class="card-footer flex flex-row w-full justify-between ">
-          <p class="card-date">{date}</p>
-          <p class="card-location">{location}</p>
+        <div className="card-footer flex flex-row w-full justify-between ">
+          <p className="card-date">{date}</p>
+          <p className="card-location">{location}</p>
         </div>
       </div>
   )
