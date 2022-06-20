@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Typing from './Typing'
 
-const Button = ({link, timeDelay = 2000, text}) => {
+const Button = ({link, timeDelay = 2000, text, staticText}) => {
     const [phase, setPhase] = useState('New')
     const [button, setButton] = useState()
 
@@ -18,7 +18,7 @@ const Button = ({link, timeDelay = 2000, text}) => {
                 setButton(
                     <a href={link}>
                         <button className="button-glow text-xs sm:text-base" role="button">
-                            <Typing replaceText={text} typingInterval={80} typeDelay={750} />
+                            <Typing replaceText={text} staticText={staticText} typingInterval={80} typeDelay={750} />
                         </button>
                     </a>
                 )
