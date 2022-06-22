@@ -1,6 +1,6 @@
 import { DiPython, DiCss3} from "react-icons/di";
 import { AiFillHtml5, AiFillGithub, AiOutlineConsoleSql } from "react-icons/ai";
-import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandNextjs, TbPlayCard } from "react-icons/tb";
 import { FaDog, FaGuitar } from "react-icons/fa";
 import { SiCplusplus, SiCsharp, SiJavascript, SiTailwindcss, SiBlazor, SiFlask, SiMicrosoftoffice, SiVisualstudio, SiVisualstudiocode, SiSqlite, SiLabview } from "react-icons/si";
 import { GiSushis } from "react-icons/gi";
@@ -33,7 +33,7 @@ const icons = {
     // other icons
     "dog": <FaDog size={24}/>,
     "guitar": <FaGuitar size={24}/>,
-    "card": <CgCardSpades size={24}/>,
+    "card": <CgCardSpades size={24} style={{transform: 'rotate(180deg)'}}/>,
     "sushi": <GiSushis size={24}/>,
     "link": <BsLink45Deg size={25}/>,
     "phone": <BsFillPhoneFill size={25}/>,
@@ -46,7 +46,7 @@ for (const key of Object.keys(icons)){
     test.push(<div className="flex flex-row"> {icons[key]} &nbsp;<Typing replaceText="  TestText" /></div>)
 }
 
-const IconText = ({icon, text = "", curCount = 1, timeDelay = 0}) => {
+const IconText = ({icon, text, staticText, curCount = 0, timeDelay = 0}) => {
     
     const [iconText, setIconText] = useState([])
     const [phase, setPhase] = useState("New")
@@ -62,7 +62,7 @@ const IconText = ({icon, text = "", curCount = 1, timeDelay = 0}) => {
             case 'Create': {
                 setIconText(
                     <div className="flex flex-row"> 
-                        {icons[icon]} &nbsp;&nbsp; <div className="text-skill"><Typing replaceText={text} typingInterval={30} typeDelay={0} curCount={curCount}/></div>
+                        {icons[icon]} &nbsp;&nbsp; <div className="text-skill"><Typing staticText={staticText} replaceText={text} typingInterval={30} typeDelay={0} curCount={curCount}/></div>
                     </div>
                 )
                 setPhase('Done')
@@ -75,7 +75,7 @@ const IconText = ({icon, text = "", curCount = 1, timeDelay = 0}) => {
     }, [ iconText, phase])
 
   return (
-    <div> {iconText} </div>
+    <>{iconText}</>
   )
 }
 
