@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Typing from './Typing'
 
@@ -16,11 +17,13 @@ const Button = ({link, timeDelay = 2000, text, staticText}) => {
 
             case 'Create': {
                 setButton(
-                    <a href={link}>
-                        <button className="button-glow text-xs sm:text-base" role="button">
-                            <Typing replaceText={text} staticText={staticText} typingInterval={80} typeDelay={750} />
-                        </button>
-                    </a>
+                    <Link href={link}>
+                        <a>
+                            <button className="button-glow text-xs sm:text-base" role="button">
+                                <Typing replaceText={text} staticText={staticText} typingInterval={80} typeDelay={750} />
+                            </button>
+                        </a>
+                    </Link>   
                 )
                 setPhase('Done')
             }
