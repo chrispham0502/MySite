@@ -1,17 +1,17 @@
 import Head from 'next/head'
 import Intro from '../components/Intro'
 import Button from '../components/Button'
-import { useAnimation} from "../contexts/AnimationContext";
+import { useAnimation } from "../contexts/AnimationContext";
 
 function Home() {
-  
-  const [animation] = useAnimation()
+
+  const [animation] = useAnimation();
   
   if (animation) {
     return (
       <div className="flex h-full w-full justify-center items-center">
         <Head>
-          <title>Triet Pham's Portfolio</title>
+          <title>Triet Pham&apos;s Portfolio</title>
         </Head>
   
          <div className="flex flex-col items-center">
@@ -26,16 +26,16 @@ function Home() {
     return (
       <div className="flex h-full w-full justify-center items-center">
         <Head>
-          <title>Triet Pham's Portfolio</title>
+          <title>Triet Pham&apos;s Portfolio</title>
         </Head>
         <div className="flex flex-col items-center">
             <h1 className="intro">
-              "Welcome to my website!"
+              Welcome to my website!&nbsp;
             </h1> 
             <br/>
             <br/>
             <Button key={2} link='/about' timeDelay={0} staticText="Learn more about me"/>
-          </div>  
+          </div>
       </div>
     )
   }

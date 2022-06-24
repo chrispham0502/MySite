@@ -56,7 +56,7 @@ function About() {
             ABOUT ME
           </h1>
           <div className='about-box mt-5 text-xs sm:text-base'>
-            I'm from Vietnam, currently an international student majoring in Computer Science at University of Cincinnati. I'm passionate about technology, I like to code and I always strive for exellence. I'm constantly
+            I&apos;m from Vietnam, currently an international student majoring in Computer Science at University of Cincinnati. I&apos;m passionate about technology, I like to code and I always strive for exellence. I&apos;m constantly
             learning to achieve my goal of becoming an outstanding software engineer.
           </div>
       
