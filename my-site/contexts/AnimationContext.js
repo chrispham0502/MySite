@@ -11,12 +11,11 @@ export function AnimationProvider ({children}) {
   const [playAnimation, setPlayAnimation] = useState(true)
   
   const toggleAnimation = () => {
-    console.log("toggle animation");
     setPlayAnimation(prePlayAnimation => !prePlayAnimation)
   }
   return (
     <>
-      <AnimationContext.Provider value={[playAnimation, toggleAnimation]}>
+      <AnimationContext.Provider value={[playAnimation, setPlayAnimation, toggleAnimation]}>
         {children}
       </AnimationContext.Provider>
     </>
