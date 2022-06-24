@@ -1,5 +1,3 @@
-
-
 const ExperienceCard = ({bgURL, logoURL, company, department, job, description, date, location}) => {
   return (
     <div className="card">
