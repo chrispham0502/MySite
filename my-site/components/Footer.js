@@ -37,8 +37,8 @@ const Footer = () => {
         </div>
         <button className="button-a" onClick={toggleAnimation}>
         {animation
-          ? <div title="Skip Animation"><MdSkipNext size={40}/></div>
-          : <div title="Replay Animation"><MdReplay size={40}/></div>
+          ? <div title="Skip Animation"><MdSkipNext size={20}/></div>
+          : <div title="Replay Animation"><MdReplay size={20}/></div>
           }
         </button>
         
