@@ -13,23 +13,32 @@ const NavBar = () => {
               <span>trietpham.me</span>
           </a>
         </Link>
-        <ul>
-            <li>
-              <Link href="/about">
-                <a className={router.pathname == "/about" ? "itemSelected" : "item"}>About</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/experience">
-                <a  className={router.pathname == "/experience" ? "itemSelected" : "item"}>Experience</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact">
-                <a  className={router.pathname == "/contact" ? "itemSelected" : "item"}>Contact</a>
-              </Link>
-            </li>
-        </ul>
+        <div className="menu">
+          <ul>
+              <li>
+                <Link href="/about">
+                  <a className={router.pathname == "/about" ? "itemSelected" : "item"}>About</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/experience">
+                  <a  className={router.pathname == "/experience" ? "itemSelected" : "item"}>Experience</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <a  className={router.pathname == "/contact" ? "itemSelected" : "item"}>Contact</a>
+                </Link>
+              </li>
+          </ul>
+        </div>
+        <button className="menu-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        
         </div>
     </nav>
   )
