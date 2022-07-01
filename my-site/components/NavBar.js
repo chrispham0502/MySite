@@ -8,45 +8,14 @@ const NavBar = () => {
   
   const router = useRouter()
 
-  const [menuButton, setMenuButton] = useState("menu-button")
-  const [menuMobile, setMenuMobile] = useState("menu-mobile")
-
-  const handleMenuButtonClick = () => {
-    if (router.pathname == "/"){
-      if (menuButton == "menu-button"){
-        setMenuButton("menu-button is-active")
-      }
-      else {
-        setMenuButton("menu-button")
-      }
-    }
-    else {
-      if (menuButton == "menu-button is-selected"){
-        setMenuButton("menu-button is-active is-selected")
-      }
-      else {
-        setMenuButton("menu-button is-selected")
-      }
-    }
-    
-    if (menuMobile == "menu-mobile"){
-      setMenuMobile("menu-mobile is-active")
-    }
-    else {
-      setMenuMobile("menu-mobile")
-    }
-
-  };
+  const [isNavActive, setNavActive] = useState(false)
 
   return (
     <nav>
       <div className=" bg-transparent flex flex-wrap justify-between items-stretch mx-auto pl-3 pr-5 py-2 md:py-1">
         <Link href="/">
           <a className={router.pathname == "/" ? "itemSelected" : "item"}
-          onClick = { () => {
-            setMenuButton("menu-button");
-            setMenuMobile("menu-mobile");
-          }}>
+              onClick = { () => setNavActive(false)}>
               <span>trietpham.me</span>
           </a>
         </Link>
@@ -69,39 +38,33 @@ const NavBar = () => {
               </li>
           </ul>
         </div>
-        <div className={menuMobile}>
+        <div className={`menu-mobile ${isNavActive? 'is-active' : ''}`}>
           <ul>
               <li>
                 <Link href="/about">
                   <a className={router.pathname == "/about" ? "itemSelected" : "item"}
-                      onClick = { () => {
-                        setMenuButton("menu-button is-selected");
-                        setMenuMobile("menu-mobile");
-                      }}>About</a>
+                      onClick = { () => setNavActive(false)}
+                  >About</a>
                 </Link>
               </li>
               <li>
                 <Link href="/experience">
                   <a  className={router.pathname == "/experience" ? "itemSelected" : "item"}
-                  onClick = { () => {
-                    setMenuButton("menu-button is-selected");
-                    setMenuMobile("menu-mobile");
-                  }}>Experience</a>
+                  onClick = { () => setNavActive(false)}
+                  >Experience</a>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
                   <a  className={router.pathname == "/contact" ? "itemSelected" : "item"}
-                  onClick = { () => {
-                    setMenuButton("menu-button is-selected");
-                    setMenuMobile("menu-mobile");
-                  }}>Contact</a>
+                    onClick = { () => setNavActive(false)}
+                  >Contact</a>
                 </Link>
               </li>
           </ul>
         </div>
-        <button className={menuButton}
-                onClick = {handleMenuButtonClick}>
+        <button className={`menu-button ${router.pathname !== "/"? "is-selected" : ""} ${isNavActive? 'is-active' : ''}`}
+                onClick = {() => setNavActive(prev => !prev)}>
           <span></span>
           <span></span>
           <span></span>
