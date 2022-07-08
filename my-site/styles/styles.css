@@ -24,13 +24,8 @@ background-color: white;
 }
 
 nav ul {
-max-width: 80%;
 list-style: none;
 text-align: center;
-}
-
-nav ul li {
-display: inline-block;
 }
 
 nav a {
@@ -58,6 +53,7 @@ color: rgb(53, 45, 45);
 /* nav item */
 .item {
     position: relative;
+    z-index: 99;
 }
 
 .item::after {
@@ -69,7 +65,7 @@ color: rgb(53, 45, 45);
     width: 0%;
     content: '.';
     color: transparent;
-    background: rgb(0, 0, 0);
+    background: rgb(53, 45, 45);
     height: 1px;
 }
 
@@ -79,6 +75,104 @@ color: rgb(53, 45, 45);
   
 .itemSelected {
     color: rgb(53, 45, 45);
+    z-index: 99;
+}
+
+.menu {
+  max-width: 80%;
+  display: none;
+}
+
+.menu ul li {
+  display: inline-block;
+  }
+
+.menu-mobile {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  min-height: 100vh;
+  background-color: white;
+  z-index: 98;
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.menu-mobile.is-active {
+  left: 0;
+}
+
+.menu-mobile a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto
+}
+
+.menu-button {
+  display: block;
+  outline: none;
+  user-select: none;
+  margin-top: 12px;
+  z-index: 99;
+}
+
+.menu-button span{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 4px;
+  position: relative;
+  background-color: #aaa;
+  border-radius: 10px;
+  transform-origin: 0 0;
+  transition: 0.4s;
+  justify-content: right;
+}
+
+.menu-button:hover span{
+  background-color: rgb(53, 45, 45);
+}
+.menu-button:hover span:nth-child(2){
+  transform-origin: right;
+  transform: scaleX(0.75);
+  
+}
+
+.menu-button:hover span:nth-child(3){
+  transform-origin: right;
+  transform: scaleX(0.5);
+}
+
+.menu-button.is-selected span {
+  background-color: rgb(53, 45, 45);
+}
+.menu-button.is-active span{
+  background-color: rgb(53, 45, 45);
+}
+.menu-button.is-active span:nth-child(2){
+  transform-origin: right;
+  transform: scaleX(0.75);
+}
+.menu-button.is-active span:nth-child(3){
+  transform-origin: right;
+  transform: scaleX(0.5);
+}
+
+@media (min-width: 500px){
+  .menu {
+    display: block;
+  }
+
+  .menu-mobile {
+    display: none;
+  }
+
+  .menu-button{
+    display: none;
+  }
 }
 
 main {
@@ -108,7 +202,7 @@ footer a {
 .layout {
   height: 100vh;
   background-color: white;
-}  
+}
 
 /* Button CSS */
 .button-glow {
@@ -520,24 +614,6 @@ footer a {
 
 /* ANIMATION BUTTON CSS */
 
-.button-b {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 15px;
-  bottom:calc(7vh + 15px);
-  width: 30px;
-  height: 30px;
-  border-radius: 100px;
-  background-color: white;
-  border-width: 2px;
-  border-color: #050505;
-  transition-duration: 1s;
-  box-shadow: 0 4px 4px 0 rgba(140, 145, 148, 0.3), 0 8px 12px 6px rgba(158, 162, 165, 0.15);
-}
-
-
 @keyframes zoom {
   from {
     object-position: 0 50%;
@@ -623,7 +699,7 @@ footer a {
     .contact-box{
       box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       @apply
-      max-w-xs sm:max-w-md xl:max-w-xl xl:min-w-full  bg-white rounded-2xl px-4 sm:px-6 py-4 sm:py-6 text-center
+      max-w-xs min-w-full sm:max-w-md xl:max-w-xl  bg-white rounded-2xl px-4 sm:px-6 py-4 sm:py-6 text-center
     }
 
     .text-skill{
@@ -656,7 +732,7 @@ footer a {
       position: fixed;
       right: 15px;
       bottom:calc(7vh + 15px);
-      background: white;
+      background: rgb(243, 242, 242);
       border-radius: 100px;
       border-width: 2px;
       border-color: #050505;
