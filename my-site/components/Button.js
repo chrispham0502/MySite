@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Typing from './Typing'
 
-const Button = ({link, timeDelay = 2000, text, staticText}) => {
+const Button = ({type = "button", link, timeDelay = 2000, text, staticText}) => {
     const [phase, setPhase] = useState('New')
     const [button, setButton] = useState()
 
@@ -19,7 +19,7 @@ const Button = ({link, timeDelay = 2000, text, staticText}) => {
                 setButton(
                     <Link href={link}>
                         <a>
-                            <button className="button-glow text-xs sm:text-base" role="button">
+                            <button className="button-glow text-xs sm:text-base" type={type}>
                                 <Typing replaceText={text} staticText={staticText} typingInterval={80} typeDelay={750} />
                             </button>
                         </a>

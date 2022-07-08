@@ -59,14 +59,14 @@ function Contact() {
             </h1>
             <form className="contact-box mt-5" action="POST" data-netlify="true">
               <div className="form-box">
-                <div className="form-input-box"><input className="form-input" placeholder="Name"/></div>
-                <div className="form-input-box"><input className="form-input" placeholder="Email"/></div>
-                <div className="form-input-box"><input className="form-input" placeholder="Message"/></div>
+                <div className="form-input-box"><input className="form-input" name="name" placeholder="Name"/></div>
+                <div className="form-input-box"><input className="form-input" name="email" placeholder="Email"/></div>
+                <div className="form-input-box"><input className="form-input" name="message" placeholder="Message"/></div>
               </div>
             </form>
   
             <div className="my-10 sm:my-20 ">
-              <Button key={2} link='#' timeDelay={0} staticText="Send message"/>
+              <Button type="submit" key={2} link='#' timeDelay={0} staticText="Send message"/>
             </div>
           </div>
         </div> 
