@@ -25,7 +25,7 @@ function Contact() {
             <h1 className="p-head mt-20">
               <Typing key={2} replaceText="&nbsp;SEND A MESSAGE" timeDelay={10000} typingInterval={80} typeDelay={500} curCount={4} />
             </h1>
-            <form id="contact-form" name="contact" className="contact-box mt-5 fade-in" style={{"--fade-in-animation":"fade-in-h" ,"--animation-delay":"15.5s"}} action="POST" data-netlify="true">
+            <form id="contact-form" name="contact" className="contact-box mt-5 fade-in" style={{"--fade-in-animation":"fade-in-h" ,"--animation-delay":"15.5s"}} method="POST" data-netlify="true">
               <div className="form-box">
                 <div className="form-input-box"><input className="form-input" placeholder="Name"/></div>
                 <div className="form-input-box"><input className="form-input" placeholder="Email"/></div>
@@ -57,7 +57,7 @@ function Contact() {
             <h1 className="p-head mt-20">
               SEND A MESSAGE
             </h1>
-            <form id="contact-form" name="contact" className="contact-box mt-5" action="POST" data-netlify="true">
+            <form id="contact-form" name="contact" className="contact-box mt-5" method="POST" data-netlify="true">
               <div className="form-box">
                 <div className="form-input-box"><input className="form-input" name="name" placeholder="Name"/></div>
                 <div className="form-input-box"><input className="form-input" name="email" placeholder="Email"/></div>
