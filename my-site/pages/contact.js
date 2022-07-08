@@ -57,7 +57,7 @@ function Contact() {
             <h1 className="p-head mt-20">
               SEND A MESSAGE
             </h1>
-            <form className="contact-box mt-5" action="POST" data-netlify="true">
+            <form name="contact" className="contact-box mt-5" action="POST" data-netlify="true">
               <div className="form-box">
                 <div className="form-input-box"><input className="form-input" name="name" placeholder="Name"/></div>
                 <div className="form-input-box"><input className="form-input" name="email" placeholder="Email"/></div>
