@@ -14,6 +14,9 @@
   --speed: 0.45s;
 }
 
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 
 /* NAVIGATION */
 nav {
@@ -130,20 +133,6 @@ color: rgb(53, 45, 45);
   transform-origin: 0 0;
   transition: 0.4s;
   justify-content: right;
-}
-
-.menu-button:hover span{
-  background-color: rgb(53, 45, 45);
-}
-.menu-button:hover span:nth-child(2){
-  transform-origin: right;
-  transform: scaleX(0.75);
-  
-}
-
-.menu-button:hover span:nth-child(3){
-  transform-origin: right;
-  transform: scaleX(0.5);
 }
 
 .menu-button.is-selected span {
@@ -435,7 +424,7 @@ footer a {
   margin: 22px 0 16px 0;
   font-size: var(--fontMedium);
   font-weight: var(--fontLight);
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75);
   opacity: 0;
   -webkit-transition: all var(--speed) ease;
   transition: all var(--speed) ease;
@@ -592,7 +581,7 @@ footer a {
   width: 0%;
   content: '.';
   color: transparent;
-  background: rgb(196, 193, 193);
+  background: rgb(211, 211, 211);
   height: 2px;
   transition: 1s;
 }
@@ -622,6 +611,7 @@ footer a {
     object-position: 100% 50%;
   }
 }
+
 
 
 @layer components{
@@ -732,14 +722,15 @@ footer a {
       position: fixed;
       right: 15px;
       bottom:calc(7vh + 15px);
-      background: rgb(243, 242, 242);
+      background: rgb(240, 240, 240);
       border-radius: 100px;
       border-width: 2px;
       border-color: #050505;
       box-shadow: 0 4px 4px 0 rgba(140, 145, 148, 0.3), 0 8px 12px 6px rgba(158, 162, 165, 0.15);
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
       @apply
       w-8 h-8
-      opacity-100
+      opacity-80
       xl:opacity-60
       xl:w-11 xl:h-11
       xl:hover:opacity-100
