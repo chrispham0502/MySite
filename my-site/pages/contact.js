@@ -77,7 +77,7 @@ function Contact() {
 
   return <>
     {/* Static contact form to help Netlify */}
-    <form name="contact" data-netlify="true" hidden>
+    <form name="contact" data-netlify="true" action="/thank" hidden>
       <input name="name" placeholder="Name"/>
       <input name="email" placeholder="Email" type="email"/>
       <input name="message" placeholder="Message"/>
