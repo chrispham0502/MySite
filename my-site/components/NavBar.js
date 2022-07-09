@@ -63,7 +63,7 @@ const NavBar = () => {
               </li>
           </ul>
         </div>
-        <button className={`menu-button ${router.pathname !== "/"? "is-selected" : ""} ${isNavActive? 'is-active' : ''}`}
+        <button className={`menu-button ${(router.pathname !== "/" && router.pathname !== "/thank")? "is-selected" : ""} ${isNavActive? 'is-active' : ''}`}
                 onClick = {() => setNavActive(prev => !prev)}>
           <span></span>
           <span></span>
