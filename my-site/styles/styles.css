@@ -169,7 +169,7 @@ color: rgb(53, 45, 45);
 
 main {
   padding-top: 70px;
-  height: calc(100% - 140px);
+  height: calc(100% - 70px);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -186,6 +186,7 @@ footer {
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 footer a {
@@ -758,10 +759,10 @@ footer a {
       -webkit-tap-highlight-color: rgba(0,0,0,0);
       @apply
       w-8 h-8
-      opacity-80
-      xl:opacity-60
-      xl:w-11 xl:h-11
-      xl:hover:opacity-100
+      opacity-100
+      lg:opacity-60
+      lg:w-11 lg:h-11
+      lg:hover:opacity-100
     }
 
 }
