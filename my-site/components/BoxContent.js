@@ -73,8 +73,8 @@ const contents = {
                         <div className="hobby-content"><IconText curCount={4} timeDelay={6000} typeDelay={500} icon="sushi" text="I'm always down for sushi" /></div>
                     </div>
                 </div>,
-"factsStatic":  <div className='about-box mt-5 w-full py-8'>
-                    <div className='flex flex-row justify-center xl:px-6 xl:pr-1'>
+"factsStatic":  <div className='about-box mt-5 w-full px-0 py-8'>
+                    <div className='flex flex-row justify-center  xl:px-6 xl:pr-1'>
                         <div className="hobby-content -mt-1 sm:mt-0"><IconText icon="dog" staticText="I'm a huge dog lover" /></div>
                         <div className="hobby-content -mt-1 sm:mt-0"><IconText icon="guitar" staticText="I enjoy playing guitar" /></div>
                     </div>
