@@ -746,7 +746,7 @@ footer a {
     .contact-content{
       margin: 0 15px;
       @apply
-      pl-8 sm:pl-0 justify-center mt-4
+      pl-10 sm:pl-0 justify-center mt-4
     }
 
     .button-a {
