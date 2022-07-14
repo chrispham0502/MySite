@@ -373,9 +373,6 @@ footer a {
   mix-blend-mode: normal;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
 }
 
 .card:hover .card-logo img {
