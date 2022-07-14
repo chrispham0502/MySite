@@ -245,6 +245,35 @@ footer a {
   border-radius: 10px;
 }
 
+@media (max-width: 500px){
+  .button-glow:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #222,
+      #333,
+      #050505,
+      #292828,
+      #1f1f20,
+      #38323f,
+      #161616,
+      #302e2e
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+}
+
 @keyframes glowing-button-85 {
   0% {
     background-position: 0 0;
@@ -373,11 +402,23 @@ footer a {
   mix-blend-mode: normal;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
+
+
 
 .card:hover .card-logo img {
   -webkit-transform: scale(1.1, 1.1)  translateZ(0);
   transform: scale(1.1, 1.1)  translateZ(0);
+}
+
+@media (max-width: 500px){
+  .card:hover .card-logo img {
+    -webkit-transform: scale(1, 1)  translateZ(0);
+    transform: scale(1, 1)  translateZ(0);
+  }
 }
 
 .card-body {
