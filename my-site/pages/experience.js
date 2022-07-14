@@ -54,7 +54,7 @@ function Experience() {
                               description= {<> 
                               •	Worked alongside a professor and other TAs to teach an Engineering class of over 60 students.<br/> 
                               •	Introduced students to the concepts and principles of different fields of engineering.<br/> 
-                              •	Improved students learning experience, academic performance as well as helped them develop soft skills and technical skills by running Peer Mentoring sessions.<br/> 
+                              •	Improved students learning experience, academic performance, helped them develop soft skills and technical skills through Peer Mentoring sessions.<br/> 
                               •	Graded assignments, exams and ran project demonstrations.
                               </>}
               />

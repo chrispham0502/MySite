@@ -276,7 +276,7 @@ footer a {
 
 @media (max-width: 500px){
   .card {
-    width: 275px;
+    width: 280px;
   }
 }
 
@@ -441,7 +441,7 @@ footer a {
 
 @media (max-width: 500px){
   .card-description {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
