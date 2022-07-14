@@ -63,7 +63,7 @@ const contents = {
                         <div className="skill-content"><IconText icon="office" staticText="Office" /></div>
                     </div>
                  </div>,
-"facts":        <div className='about-box mt-5 w-full py-8'>
+"facts":        <div className='about-box mt-5 w-full px-0 py-8'>
                     <div className='flex flex-row justify-center xl:px-6 xl:pr-1'>
                         <div className="hobby-content -mt-1 sm:mt-0"><IconText curCount={2} timeDelay={0} typeDelay={500} icon="dog" text="I'm a huge dog lover" /></div>
                         <div className="hobby-content -mt-1 sm:mt-0"><IconText curCount={2} timeDelay={2000} typeDelay={500} icon="guitar" text="I enjoy playing guitar" /></div>
