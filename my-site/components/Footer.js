@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <>
-    <footer className="relative">
+    <footer>
         <div className="flex flex-row relative">
           <a className="hover:opacity-50 ease-in-out duration-200" href="https://www.facebook.com/minhtriet.pham.0502" target="_blank" rel="noopener noreferrer">
             <AiOutlineFacebook size={25}/>

@@ -20,10 +20,13 @@ a {
 
 /* NAVIGATION */
 nav {
-height: 8vh;
+position: fixed;
+top: 0;
+height: 70px;
 width: 100%;
 margin: 0;
 background-color: white;
+z-index: 100;
 }
 
 nav ul {
@@ -165,14 +168,19 @@ color: rgb(53, 45, 45);
 }
 
 main {
-  height: 85vh;;
+  padding-top: 70px;
+  height: calc(100% - 140px);
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 footer {
-  height: 7vh;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 70px;
+  z-index: 100;
   display: flex;
   flex: 1;
   border-top: 1px solid #eaeaea;
@@ -741,7 +749,7 @@ footer a {
       align-items: center;
       position: fixed;
       right: 15px;
-      bottom:calc(7vh + 15px);
+      bottom:calc(70px + 15px);
       background: rgb(240, 240, 240);
       border-radius: 100px;
       border-width: 2px;
