@@ -248,28 +248,15 @@ footer a {
 @media (max-width: 500px){
   .button-glow:before {
     content: "";
-    background: linear-gradient(
-      45deg,
-      #222,
-      #333,
-      #050505,
-      #292828,
-      #1f1f20,
-      #38323f,
-      #161616,
-      #302e2e
-    );
+    background: #333;
     position: absolute;
     top: -2px;
     left: -2px;
     background-size: 400%;
-    z-index: -1;
     filter: blur(5px);
     -webkit-filter: blur(5px);
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    animation: glowing-button-85 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
   }
 }
