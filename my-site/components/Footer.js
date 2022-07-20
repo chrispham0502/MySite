@@ -22,18 +22,18 @@ const Footer = () => {
     <>
     <footer>
         <div className="flex flex-row relative">
-          <a className="hover:opacity-50 ease-in-out duration-200" href="https://www.facebook.com/minhtriet.pham.0502" target="_blank" rel="noopener noreferrer">
-            <AiOutlineFacebook size={25}/>
-          </a>
-          <a className="hover:opacity-50 ease-in-out duration-200" href="https://www.instagram.com/snow.0502/" target="_blank" rel="noopener noreferrer">
-            <AiOutlineInstagram size={25}/>
-          </a>
           <a className="hover:opacity-50 ease-in-out duration-200" href="https://www.linkedin.com/in/triet-pham-0502/" target="_blank" rel="noopener noreferrer">
             <AiOutlineLinkedin size={25}/>
           </a>
           <a className="hover:opacity-50 ease-in-out duration-200" href="https://github.com/chrispham0502" target="_blank" rel="noopener noreferrer">
             <AiFillGithub size={25} />
           </a>
+          <a className="hover:opacity-50 ease-in-out duration-200" href="https://www.instagram.com/snow.0502/" target="_blank" rel="noopener noreferrer">
+            <AiOutlineInstagram size={25}/>
+          </a>
+          <a className="hover:opacity-50 ease-in-out duration-200" href="https://www.facebook.com/minhtriet.pham.0502" target="_blank" rel="noopener noreferrer">
+            <AiOutlineFacebook size={25}/>
+          </a>     
         </div>
         <button className="button-a" onClick={toggleAnimation}>
         {animation
